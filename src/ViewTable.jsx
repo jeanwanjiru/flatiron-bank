@@ -1,6 +1,6 @@
 import React from "react";
 import propTypes from "prop-types";
-// import Form from "./Components/Form"
+
 export const ViewTable = ({ transactions }) => {
   return (
     <table className="w-full text-sm text-center text-gray-500">
@@ -14,7 +14,7 @@ export const ViewTable = ({ transactions }) => {
       </thead>
       <tbody>
         {transactions.map(transaction => (
-          <tr key={transaction.id}>
+          <tr key={transaction.id} className="bg-gray-200 border">
             <td>{transaction.date}</td>
             <td>{transaction.description}</td>
             <td>{transaction.category}</td>
